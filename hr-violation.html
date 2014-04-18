@@ -1,0 +1,42 @@
+<head>
+  <title>HR Violation</title>
+</head>
+
+<body>
+    <div class="container theme-showcase" role="main">
+        {{> jumbotron}}
+        {{> violations}}
+    </div>
+</body>
+
+<template name="jumbotron">
+  <div class="jumbotron">
+    <h1>HR Violation</h1>
+    <p>Is your workplace filled with miserable assholes? Now you can let the whole world and HR know.</p>
+    <div class="report-offender">
+        <p><a href="#" class="report-btn btn btn-danger btn-lg" role="button">Report an Offender &raquo;</a></p>
+    </div>
+    <div class="report-offender-form hidden">
+        <p><input type="text" class="text-input victim" placeholder="Your Name"/> reports
+            <input type="text" class="text-input criminal" placeholder="{{randomCriminal}}"/> for
+            <input type="text" class="text-input violation" placeholder="{{randomViolation}}"/>
+            <span class="refresh-violation glyphicon glyphicon-refresh"></span>
+            <a href="#" class="submit-btn btn btn-danger" role="button">Report!</a>
+            <p class='name-alert hidden'>Please provide your real full name. This is a Pfeifer strike.</p>
+        </p>
+
+    </div>
+  </div>
+</template>
+
+<template name="violations">
+    <div class="page-header">
+        {{#each violations}}
+            <div class="alert alert-danger">
+                <strong>{{victim}}</strong> reported <strong>{{criminal}}</strong> for <strong>{{violation}}</strong>
+                <span class="violation-time">{{violationTime}}</span>
+            </div>
+        {{/each}}
+    </div>
+
+</template>

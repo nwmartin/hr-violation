@@ -1,0 +1,13 @@
+/* CSS declarations go here */
+.violation-time {
+    float: right;
+}
+.refresh-violation {
+    margin-right: 15px;
+}
+.text-input {
+    margin-top: 7px;
+}
+.submit-btn {
+    margin-bottom: 7px;
+}
